@@ -3,33 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - TCA STUDIO</title>
+    <title>TCA STORE - GTA SAMP</title>
     <style>
+        /* CSS Design Thudangunnu */
         body {
-            background: #0d0d0d;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f3f6; /* Flipkart background color */
+        }
+
+        /* Header Design */
+        .header {
+            background-color: #2874f0; /* Flipkart Blue */
+            padding: 15px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .logo span {
+            color: #ffe500; /* Yellow text */
+        }
+
+        /* Search Bar (Design mathram) */
+        .search-bar {
+            background: white;
+            padding: 8px;
+            width: 50%;
+            border-radius: 2px;
+            display: flex;
+        }
+        .search-bar input {
+            border: none;
+            width: 100%;
+            outline: none;
+        }
+
+        /* Main Banner */
+        .banner {
+            background-color: #212121;
             color: white;
             text-align: center;
-            font-family: Arial, sans-serif;
-            padding: 20px;
+            padding: 40px 20px;
+            margin-bottom: 10px;
         }
-        h1 { color: #00c8ff; }
-        .box {
-            background: #1a1a1a;
-            padding: 15px;
-            width: 90%;
-            margin: 20px auto;
-            border-radius: 12px;
-            box-shadow: 0 0 10px #00c8ff;
+        .banner h1 { margin: 0; }
+        .banner p { color: #ccc; }
+
+        /* Products Section */
+        .container {
+            padding: 10px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* Product Grid (Flipkart Style) */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Mobile-il 2 ennam */
+            gap: 10px;
+        }
+
+        @media (min-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(4, 1fr); /* PC-il 4 ennam */
+            }
+        }
+
+        /* Product Card */
+        .card {
+            background: white;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 4px;
+            background-color: #ddd; /* Image illatha samayath */
+        }
+
+        .product-name {
+            font-size: 14px;
+            margin: 10px 0 5px;
+            font-weight: 600;
+        }
+
+        .price {
+            font-size: 16px;
+            color: #388e3c; /* Green color for price */
+            font-weight: bold;
+        }
+
+        .old-price {
+            font-size: 12px;
+            color: #878787;
+            text-decoration: line-through;
+            margin-left: 5px;
+        }
+
+        .buy-btn {
+            background-color: #ff9f00;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 2px;
+        }
+
+        .buy-btn:hover {
+            background-color: #f39401;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #172337;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 12px;
         }
     </style>
 </head>
 <body>
 
-    <h1>About TCA STUDIO</h1>
-    <div class="box">
-        <p>TCA STUDIO is a website created for all GTA SAMP players.</p>
-        <p>We provide: Skins, Cars, Maps, ENB, Server Files & More.</p>
+    <div class="header">
+        <div class="logo">TCA <span>STORE</span></div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for GTA items...">
+        </div>
     </div>
+
+    <div class="banner">
+        <h1>Welcome to TCA STORE</h1>
+        <p>Kerala's No.1 GTA SAMP Mod Store</p>
+    </div>
+
+    <div class="container">
+        <div class="section-title">Latest Drops</div>
+        
+        <div class="product-grid">
+            
+            <div class="card">
+                <img src="https://via.placeholder.com/300x300/000000/FFFFFF/?text=VIP+Pack" alt="VIP Pack">
+                <div class="product-name">TCA VIP Membership</div>
+                <div class="price">₹199 <span class="old-price">₹299</span></div>
+                <button class="buy-btn">BUY NOW</button>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/300x300/FF0000/FFFFFF/?text=Custom+Car" alt="Custom Car">
+                <div class="product-name">Custom Infernus Mod</div>
+                <div class="price">₹99 <span class="old-price">₹150</span></div>
+                <button class="buy-btn">BUY NOW</button>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/300x300/0000FF/FFFFFF/?text=Money+Pack" alt="Money Pack">
+                <div class="product-name">10 Million Game Cash</div>
+                <div class="price">₹49 <span class="old-price">₹100</span></div>
+                <button class="buy-btn">BUY NOW</button>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/300x300/FFFF00/000000/?text=Skin+Pack" alt="Skin Pack">
+                <div class="product-name">Rare Gang Skin</div>
+                <div class="price">₹149 <span class="old-price">₹200</span></div>
+                <button class="buy-btn">BUY NOW</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2024 TCA Studio. All rights reserved.<br>
+        Made for Mallu GTA SAMP Players
+    </div>
+
+    <script>
+        // Button click cheythal whatsapp-ilekk povunna code
+        const buttons = document.querySelectorAll('.buy-btn');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                alert('Contact Admin on WhatsApp to buy!');
+                // Thazhe ulla line-il ningalude number kodukkam
+                // window.location.href = "https://wa.me/919999999999"; 
+            });
+        });
+    </script>
 
 </body>
 </html>
